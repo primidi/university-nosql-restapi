@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to University API!');
 });
 
-// Student route middleware
+// Student route
 app.use('/api/mahasiswa', studentRoute);
 
 app.listen(port, () => {
