@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const { getStudents, getStudentById, addStudent, updateStudent, deleteStudent } = require('../controllers/student-controller');
+const {
+  getStudents,
+  getStudentById,
+  addStudent,
+  updateStudent,
+  deleteStudent,
+} = require('../controllers/student-controller');
 
 // Route for get all the students
 router.get('/', getStudents);

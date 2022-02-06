@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const studentRoute = require('./routes/student-route');
+const lecturerRoute = require('./routes/lecturer-route');
 require('./utils/db');
 
 const app = express();
@@ -17,6 +18,9 @@ app.get('/', (req, res) => {
 
 // Student route
 app.use('/api/mahasiswa', studentRoute);
+
+// Lecturer route
+app.use('/api/dosen', lecturerRoute);
 
 app.listen(port, () => {
   console.log(`This test is listening at http://localhost:${port}`);
